@@ -5,6 +5,7 @@ const path = require('node:path')
 if (require('electron-squirrel-startup')) {
   process.exit(0);
 }
+app.setAppUserModelId('com.aayushi.todolist');
 
 
 const isDev = !app.isPackaged

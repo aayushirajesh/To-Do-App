@@ -13,26 +13,9 @@
     "preview": "vite preview",
     "electron": "electron .",
     "dev:electron": "concurrently -k \"npm run dev\" \"wait-on http://localhost:5173 && electron .\"",
-    "build:app": "npm run build && electron-builder",
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make"
-  },
-  "build": {
-    "appId": "com.todo.list",
-    "productName": "To-Do List",
-    "files": [
-      "dist/**/*",
-      "electron/**/*",
-      "node_modules/**/*",
-      "package.json"
-    ],
-    "directories": {
-      "buildResources": "build"
-    },
-    "win": {
-      "target": "nsis"
-    }
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
