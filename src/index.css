@@ -1,0 +1,144 @@
+html {
+  scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #bac6da;
+  border-radius: 10px;
+}
+
+* {
+  font-family: 'Nunito';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #202124;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: #d6e7ff;
+  gap: 14px;
+}
+
+.header {
+  position: sticky;
+  top: 0; /* flush to top when pinned */
+  z-index: 1000;
+  background-color: #d6e7ff;
+  font-size: 2rem;
+  -webkit-app-region: drag;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+.windowControls {
+  margin-left: auto; 
+  display: flex;
+  gap: 10px;
+}
+
+.minIcon,
+.exitIcon {
+  -webkit-app-region: no-drag;
+  cursor: pointer;
+  transition: opacity 200ms;
+}
+
+.minIcon:hover,
+.exitIcon:hover {
+  opacity: 0.7;
+}
+
+
+
+.inputBox, .main {
+  max-width: 850px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  padding: 12px;
+  gap: 12px;
+}
+
+.inputBox input, .inputBox button {
+  padding: 12px;
+  border: none;
+  outline: none;
+  background: white;
+  border-radius: 14px;
+  font-size: 1em;
+}
+
+.inputBox input {
+  flex: 1;
+}
+
+.inputBox button {
+  display: flex;              /* <-- make contents alignable */
+  align-items: center;        /* <-- vertically center */
+  justify-content: center;    /* <-- horizontally center */
+  gap: 4px;
+  background: white;
+  cursor: pointer;
+  transition: opacity 200ms;
+}
+
+.inputBox button:hover {
+  opacity: 0.9;
+}
+
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 8px;
+  padding-left: 15px;
+  border-radius: 14px;
+  background: white;
+}
+
+.todoItem p {
+  flex: 1;
+  overflow-wrap: break-word;     /* NEW - breaks long words */
+  word-break: break-word;        /* NEW - forces breaking if needed */
+  white-space: normal;           /* NEW - allows wrapping */
+}
+
+
+.editDel {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.editDel button {
+  transition-duration: 200ms;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.editDel button:hover {
+  opacity: 0.7;
+}
