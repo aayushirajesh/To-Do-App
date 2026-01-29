@@ -8,8 +8,8 @@ import exit from "../assets/exit.svg";
 export default function Header() {
   return (
     <div className="header">
-        <p className='appHeading' >To-Do List</p>
         <img className='CatIcon' src={Cat} alt="Cat" />
+        <p className='appHeading' >To-Do List</p>
         <div className='windowControls'><img className='minIcon' src={min} alt="min" onClick={()=>{
             window.electronAPI?.minimizeWindow();
         }}/>
